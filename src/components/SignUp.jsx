@@ -1,4 +1,4 @@
-import { useNavigate} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
@@ -39,8 +39,8 @@ function SignUp() {
                 <input id='password_repeat' type='password' placeholder='Potwierdź hasło' />
                 <button>Zarejestruj się</button>
             </form>
+            <Link to='/signin'>Zaloguj się</Link>
         </div>
-
     );
 }
 

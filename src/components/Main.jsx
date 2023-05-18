@@ -1,7 +1,95 @@
+import { useEffect, useState } from "react";
+
+import { useNavigate } from "react-router-dom";
+
+import supabase from "../services/supabase.js";
+
+
 function Main() {
+
+    let alreadyMounted = false;
+    const navigate = useNavigate();
+
+    const [session, setSession] = useState(null);
+    const [entries, setEntries] = useState(null);
+
+    useEffect(() => {
+        if (!alreadyMounted) {
+            getSession();
+        }
+
+        alreadyMounted = true;
+    }, []);
+
+    useEffect(() => {
+        if (session) {
+            getEntries();
+        }
+    }, [session]);
+
+    const getSession = async () => {
+        const { data } = await supabase.auth.getSession();
+
+        if (!data.session) {
+            navigate('/signin');
+            return;
+        }
+        setSession(data);
+    }
+
+    const getEntries = async () => {
+        console.log(session);
+
+        let { data, error } = await supabase.from('entries').select('*').eq('author', session.session.user.email);
+
+        if (!error) {
+            setEntries(data);
+        }
+    };
+
+    const handleLogout = async () => {
+        let { error } = await supabase.auth.signOut();
+
+        if (!error) {
+            navigate('/signin');
+        }
+    }
+
+    const handleSaveText = async (e) => {
+        e.preventDefault();
+
+        const { text } = e.target.elements;
+
+        const { data, error } = await supabase
+            .from('entries')
+            .insert([
+                { entry: text.value, author: session.session.user.email },])
+            .select('*');
+
+        if (!error) {
+            setEntries(prev => [...prev, data[0]]);
+        }
+    }
+
     return(
-        <h1>Main</h1>
-    )
+        <div>
+            <button onClick={handleLogout}>Wyloguj</button>
+            <h1>Main</h1>
+            <form onSubmit={handleSaveText}>
+                <input id='text' type='text' placeholder='Wpisz teks...' />
+                <button>Zapisz</button>
+            </form>
+            {
+                entries && (
+                    <ul>
+                        {
+                            entries.map(({entry, id}) => <li key={id}>{entry}</li>)
+                        }
+                    </ul>
+                )
+            }
+        </div>
+    );
 }
 
 export default Main;

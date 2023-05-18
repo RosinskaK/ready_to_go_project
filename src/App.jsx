@@ -4,7 +4,7 @@ import Main from './components/Main.jsx';
 import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
 
-import './App.css';
+import './App.scss';
 
 function App() {
     return(
