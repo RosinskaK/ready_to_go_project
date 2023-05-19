@@ -71,6 +71,21 @@ function Main() {
         }
     }
 
+
+    async function handleRemove (id) {
+        //console.log(id);
+       const newList = entries.filter(li => li.id !== id );
+
+       const { error } = await supabase
+            .from('entries')
+            .delete()
+            .eq('id', id);
+
+        if (!error) {
+            setEntries(newList);
+        }
+    }
+
     return(
         <div>
             <button onClick={handleLogout}>Wyloguj</button>
@@ -83,7 +98,9 @@ function Main() {
                 entries && (
                     <ul>
                         {
-                            entries.map(({entry, id}) => <li key={id}>{entry}</li>)
+                            entries.map(({entry, id}) => <li key={id}>{entry}
+                            <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
+                            </li>)
                         }
                     </ul>
                 )
