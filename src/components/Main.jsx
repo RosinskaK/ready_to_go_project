@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
+import Footer from "./Footer.jsx";
 
 function Main() {
 
@@ -69,6 +70,8 @@ function Main() {
         if (!error) {
             setEntries(prev => [...prev, data[0]]);
         }
+
+        e.target.elements[0].value = 'Dodaj kolejną rzecz do spakowania';
     }
 
 
@@ -87,25 +90,29 @@ function Main() {
     }
 
     return(
-        <div>
-            <button onClick={handleLogout}>Wyloguj</button>
-            <h1>Main</h1>
-            <form onSubmit={handleSaveText}>
-                <input id='text' type='text' placeholder='Wpisz teks...' />
-                <button>Zapisz</button>
-            </form>
-            {
-                entries && (
-                    <ul>
-                        {
-                            entries.map(({entry, id}) => <li key={id}>{entry}
-                            <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
-                            </li>)
-                        }
-                    </ul>
-                )
-            }
-        </div>
+        <>
+            <div>
+                <button onClick={handleLogout}>Wyloguj</button>
+                <h1>Main</h1>
+                <form onSubmit={handleSaveText}>
+                    <input id='text' type='text' placeholder='Wpisz pierwszą rzecz do spakowania...'/>
+                    <button>Zapisz</button>
+                </form>
+                {
+                    entries && (
+                        <ul>
+                            {
+                                entries.map(({entry, id}) => <li key={id}>{entry}
+                                    <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
+                                </li>)
+                            }
+                        </ul>
+                    )
+                }
+
+            </div>
+            <Footer></Footer>
+        </>
     );
 }
 

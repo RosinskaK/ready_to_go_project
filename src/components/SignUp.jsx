@@ -2,6 +2,9 @@ import { useNavigate, Link} from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
+import Footer from "./Footer.jsx";
+
+
 function SignUp() {
 
     const navigation = useNavigate();
@@ -30,17 +33,20 @@ function SignUp() {
 
     }
 
-    return(
-        <div>
-            <h1>Zarejestruj się w ReadyToGO</h1>
-            <form onSubmit={handleSignUp}>
-                <input id='email' placeholder='Podaj swój adres email' />
-                <input id='password' type='password' placeholder='Podaj hasło' />
-                <input id='password_repeat' type='password' placeholder='Potwierdź hasło' />
-                <button>Zarejestruj się</button>
-            </form>
-            <Link to='/signin'>Zaloguj się</Link>
-        </div>
+    return (
+        <>
+            <div>
+                <h1>Zarejestruj się w ReadyToGO</h1>
+                <form onSubmit={handleSignUp}>
+                    <input id='email' placeholder='Podaj swój adres email'/>
+                    <input id='password' type='password' placeholder='Podaj hasło'/>
+                    <input id='password_repeat' type='password' placeholder='Potwierdź hasło'/>
+                    <button>Zarejestruj się</button>
+                </form>
+                <Link to='/signin'>Zaloguj się</Link>
+            </div>
+            <Footer/>
+        </>
     );
 }
 

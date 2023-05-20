@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
+import Footer from "./Footer.jsx";
 
 function SignIn() {
 
@@ -29,19 +30,22 @@ function SignIn() {
 
     }
 
-    return(
-        <div>
-            <h1>Zaloguj się do ReadyToGO</h1>
-            {
-                authError && <div style={{color: 'red'}}>{authError}</div>
-            }
-            <form onSubmit={handleSignIn}>
-                <input id='email' placeholder='Podaj swój adres email' />
-                <input id='password' placeholder='Podaj hasło' />
-                <button>Zaloguj się</button>
-            </form>
-            <Link to='/signup'>Załóż konto</Link>
-        </div>
+    return (
+        <>
+            <div>
+                <h1>Zaloguj się do ReadyToGO</h1>
+                {
+                    authError && <div style={{color: 'red'}}>{authError}</div>
+                }
+                <form onSubmit={handleSignIn}>
+                    <input id='email' placeholder='Podaj swój adres email'/>
+                    <input id='password' placeholder='Podaj hasło'/>
+                    <button>Zaloguj się</button>
+                </form>
+                <Link to='/signup'>Załóż konto</Link>
+            </div>
+            <Footer />
+        </>
     );
 }
 
