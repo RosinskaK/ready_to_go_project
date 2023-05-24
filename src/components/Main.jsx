@@ -125,15 +125,14 @@ function Main() {
         console.log(entries);
         console.log(renewList);
 
-        // const {error} = await supabase
-        //     .from('entries')
-        //     .update( {done: false})
-        //     .eq('done');
-        //
-        // if(!error) {
-        //     console.log(entries);
-        //     setEntries(renewList);
-        // }
+        const {error} = await supabase
+            .from('entries')
+            .update( {done: false})
+            .eq('done', true);
+
+        if(!error) {
+            setEntries(renewList);
+        }
     }
 
 
