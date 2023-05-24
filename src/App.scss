@@ -9,6 +9,22 @@ $my-color: blue;
   text-align: center;
 }
 
+ul {
+  border: 2px solid black;
+}
+
+ul li {
+  color: orange;
+}
+
+ul li.done {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+
 h1 {
   color: $my-color;
 }

@@ -14,6 +14,7 @@ function Main() {
     const [session, setSession] = useState(null);
     const [entries, setEntries] = useState(null);
 
+
     useEffect(() => {
         if (!alreadyMounted) {
             getSession();
@@ -64,7 +65,7 @@ function Main() {
         const { data, error } = await supabase
             .from('entries')
             .insert([
-                { entry: text.value, author: session.session.user.email },])
+                { entry: text.value, author: session.session.user.email, done: false },])
             .select('*');
 
         if (!error) {
@@ -89,6 +90,55 @@ function Main() {
         }
     }
 
+    //////////
+    const handleDone = async (id) => {
+            setEntries(entries.map(task => {
+            if (task.id === id) {
+                task.done = !task.done;
+            }
+            console.log(task.done);
+            console.log(task);
+
+            return task;   //DZIAŁA NIE RUSZAĆ !!!!!!!!!!!!!!!!!!!!!!!!!!!
+        }));
+
+        console.log(entries.done);
+        console.log(entries.id);
+        const { error } = await supabase
+            .from('entries')
+            .update( { done: entries.find(task => task.id === id).done } )
+            .eq('id', id);
+
+        if (!error) {
+            console.log(entries);
+        }
+     }
+
+
+    const handleRenewList = async () => {
+
+        const renewList = entries.map(list => {
+            list.done = false;
+            return list;
+        });
+
+        console.log(entries);
+        console.log(renewList);
+
+        // const {error} = await supabase
+        //     .from('entries')
+        //     .update( {done: false})
+        //     .eq('done');
+        //
+        // if(!error) {
+        //     console.log(entries);
+        //     setEntries(renewList);
+        // }
+    }
+
+
+    /////////
+
     return(
         <>
             <div>
@@ -96,19 +146,22 @@ function Main() {
                 <h1>Main</h1>
                 <form onSubmit={handleSaveText}>
                     <input id='text' type='text' placeholder='Wpisz pierwszą rzecz do spakowania...'/>
-                    <button>Zapisz</button>
+                    <button>Dodaj</button>
                 </form>
                 {
                     entries && (
                         <ul>
                             {
-                                entries.map(({entry, id}) => <li key={id}>{entry}
-                                    <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
-                                </li>)
+                                entries.map(({entry, id, done}) =>
+                                        <li key={id} onClick={() => handleDone(id)} className={done ? 'done' : ''}>
+                                            {entry}
+                                            <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
+                                        </li>)
                             }
                         </ul>
                     )
                 }
+                <button onClick={handleRenewList}>Przywróć listę</button>
             </div>
             <Footer></Footer>
         </>
@@ -116,3 +169,5 @@ function Main() {
 }
 
 export default Main;
+
+//
