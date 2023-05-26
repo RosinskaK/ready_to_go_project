@@ -5,7 +5,7 @@ import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
 import NotFound from "./components/NotFound.jsx";
 
-import './App.scss';
+import './scss/App.scss';
 
 function App() {
     return(
