@@ -36,8 +36,8 @@ function SignUp() {
     return (
         <>
             <div>
-                <h1>Zarejestruj się w ReadyToGO</h1>
-                <form onSubmit={handleSignUp}>
+                <p>Zarejestruj się w ReadyToGo</p>
+                <form onSubmit={handleSignUp} className='signup-form'>
                     <input id='email' placeholder='Podaj swój adres email'/>
                     <input id='password' type='password' placeholder='Podaj hasło'/>
                     <input id='password_repeat' type='password' placeholder='Potwierdź hasło'/>

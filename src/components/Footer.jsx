@@ -3,7 +3,7 @@ function Footer () {
 
     return (
         <footer>
-            <p>Created with love by &copy;Kasia Rosińska</p>
+            <p>Created by &copy;Kasia Rosińska</p>
         </footer>
     );
 }
