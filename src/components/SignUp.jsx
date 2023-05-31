@@ -7,7 +7,6 @@ import Footer from "./Footer.jsx";
 
 
 
-
 function SignUp() {
 
     const navigation = useNavigate();
@@ -37,25 +36,25 @@ function SignUp() {
     }
 
     return (
-
-            <div className='signup-div'>
-                <div className='signup-main-container'>
+        <div className='signup-div'>
+            <div className='signup-main-container'>
                 <p className='signup-logo'>ReadyToGo</p>
-                <Welcome />
+                <Welcome/>
                 <div className='signup-back'>
-                <form onSubmit={handleSignUp} className='signup-form'>
-                    <p className='signup-sign'>Zarejestruj się</p>
-                    <input className='signup-input' id='email' placeholder='Podaj swój adres email'/>
-                    <input className='signup-input' id='password' type='password' placeholder='Podaj hasło'/>
-                    <input className='signup-input' id='password_repeat' type='password' placeholder='Potwierdź hasło'/>
-                    <button className='signup-btn'>Zarejestruj się</button>
-                </form>
-                <Link className='signin-link' to='/signin'>Zaloguj się</Link>
+                    <form onSubmit={handleSignUp} className='signup-form'>
+                        <p className='signup-sign'>Zarejestruj się</p>
+                        <input className='input-sign' id='email' placeholder='Podaj swój adres email'/>
+                        <input className='input-sign' id='password' type='password' placeholder='Podaj hasło'/>
+                        <input className='input-sign' id='password_repeat' type='password'
+                               placeholder='Potwierdź hasło'/>
+                        <button className='sign-btn'>Zarejestruj się</button>
+                    </form>
+                    <p className='link-to-signin'>lub przejdź do logowania</p>
+                    <button className='sign-link'><Link to='/signin'>Zaloguj się</Link></button>
                 </div>
-                </div>
-                <Footer/>
             </div>
-
+            <Footer/>
+        </div>
     );
 }
 

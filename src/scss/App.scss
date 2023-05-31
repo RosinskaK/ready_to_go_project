@@ -4,18 +4,14 @@
 @import "elements/_footer.scss";
 @import "elements/_signup.scss";
 @import "elements/_welcome.scss";
+@import 'elements/_buttons.scss';
+@import 'elements/_inputs.scss';
 
 
 
 //ZROBIĆ TU PORZĄDEK
 
-
-
-
-
 body {
-
-  //max-width: 1280px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -33,13 +29,11 @@ body {
   min-width: 320px;
   //min-height: 100vh;
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1400px;
 
 }
 
-input:focus {
-  border: 1px solid $cinereous;
-}
+
 
 
 h1 {
