@@ -6,7 +6,8 @@
 @import "elements/_welcome.scss";
 @import 'elements/_buttons.scss';
 @import 'elements/_inputs.scss';
-
+@import "elements/_signin.scss";
+@import "elements/_contentLogIn.scss";
 
 
 //ZROBIĆ TU PORZĄDEK
@@ -35,11 +36,11 @@ body {
 
 
 
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+//
+//h1 {
+//  font-size: 3.2em;
+//  line-height: 1.1;
+//}
 
 //$my-color: blue;
 

@@ -6,7 +6,6 @@ import Welcome from "./Welcome.jsx";
 import Footer from "./Footer.jsx";
 
 
-
 function SignUp() {
 
     const navigation = useNavigate();
@@ -34,6 +33,8 @@ function SignUp() {
         console.log(error);
 
     }
+
+    //ewentualnie dodać walidacje!!!!!!!!!!!!
 
     return (
         <div className='signup-div'>

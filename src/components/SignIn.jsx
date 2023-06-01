@@ -3,7 +3,9 @@ import { useNavigate, Link } from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
+import ContentLogIn from "./ContentLogIn.jsx";
 import Footer from "./Footer.jsx";
+
 
 function SignIn() {
 
@@ -27,25 +29,29 @@ function SignIn() {
         }
 
         setAuthError(error.message);
-
     }
 
     return (
-        <>
-            <div>
-                <h1>Zaloguj się do ReadyToGO</h1>
-                {
-                    authError && <div style={{color: 'red'}}>{authError}</div>
-                }
-                <form onSubmit={handleSignIn}>
-                    <input id='email' placeholder='Podaj swój adres email'/>
-                    <input id='password' placeholder='Podaj hasło'/>
-                    <button>Zaloguj się</button>
-                </form>
-                <Link to='/signup'>Załóż konto</Link>
+        <div className='signin-div'>
+            <div className='signin-main-container'>
+                <p className='signin-logo animate__animated animate__bounceInLeft'>ReadyToGo</p>
+                <ContentLogIn/>
+                <div className='signin-back'>
+                    <form onSubmit={handleSignIn} className='signin-form'>
+                        <p className='signin-sign'>Zaloguj się</p>
+                        {
+                            authError && <div style={{color: 'red'}}>{authError}</div>
+                        }
+                        <input className='input-sign' id='email' placeholder='Podaj swój adres email'/>
+                        <input className='input-sign' id='password' placeholder='Podaj hasło'/>
+                        <button className='sign-btn'>Zaloguj się</button>
+                    </form>
+                    <p className='link-to-signup'>jeśli nie masz konta zarejestruj się</p>
+                    <button className='sign-link signin-btn-link'><Link to='/signup'>Załóż konto</Link></button>
+                </div>
             </div>
-            <Footer />
-        </>
+            <Footer/>
+        </div>
     );
 }
 

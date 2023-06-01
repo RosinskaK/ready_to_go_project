@@ -1,0 +1,70 @@
+.signin-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1400px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signin-main-container {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 680px;
+  background-color: $moonstone;
+}
+
+.signin-logo {
+  font-family: $font-logo;
+  font-size: 3em;
+  color: #ffffff;
+  width: 100%;
+  max-width: 1400px;
+  display: inline-block;
+  text-align: center;
+  margin: 35px 10px 30px 10px;
+}
+
+.signin-back {
+  justify-content: center;
+  background-color: $charcoal;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
+
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.signin-sign {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: white;
+  margin: 15px 15px 15px 15px;
+}
+
+.link-to-signup {
+  font-size: 0.7em;
+  margin: 0;
+  padding-top: 20px;
+  color: $columbia-blue;
+}
+
+.signin-btn-link {
+  background-color: $apricot;
+}
