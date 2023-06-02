@@ -33,13 +33,13 @@
 .main-top-bar-logo {
   font-family: $font-logo;
   font-size: 2em;
-  color: $charcoal;
+  color: $vivid-sky-blue;
 
 }
 
 .main-top-bar-btn {
   padding: 5px 28px;
-  background-color: $vivid-sky-blue;
+  background-color: $cinereous;
   color: white;
   font-weight: bold;
   height: 31px;
@@ -51,7 +51,7 @@
 .todolist-container {
   width: 1000px;
   height: 100%;
-  background-color: $columbia-blue;
+  background-color: $moonstone;
 
   border-radius: 10px;
   margin-bottom: 70px;
@@ -66,31 +66,62 @@
 .main-form-input {
   width: 60%;
   height: 35px;
-  font-size: 0.9em;
+  font-size: 1em;
+  line-height: 25px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 
 }
 
 .main-form-btn {
-  margin-left: 5px;
-  padding: 7px 30px;
+  //margin-left: 5px;
+  padding: 6px 30px;
   font-weight: bold;
-  background-color: $misty-rose;
-  color: $charcoal;
+  background-color: $charcoal;
+  color: white;
+  border-radius: 3px;
+  box-shadow: none;
+  height: 35px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   //box-shadow: 0 3px 3px rgba(17, 17, 17, 0.35);
-
+  &:hover {
+    background-color: $apricot;
+    color: $charcoal
+  }
 }
 
 //LIST
 ul {
-  border: 2px solid black;
-  width: 900px;
+  background-color: $main-background;
+  width: 90%;
+
+  list-style: none;
+  margin-left: 50px;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
 
 }
 
 ul li {
-  color: orange;
-  width: 700px;
-  list-style: none;
+  text-align: left;
+  padding-left: 40px;
+
+  padding-bottom: 7px;
+  padding-top: 7px;
+
+  color: $charcoal;
+
+}
+
+ul li:nth-child(even) {
+  background-color: $columbia-blue;
+}
+
+ul li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 ul li.done {
@@ -99,11 +130,18 @@ ul li.done {
   text-decoration: line-through;
 }
 
+.todolist-li-btn {
+  margin-left: 10px;
+}
+
 
 .main-btn-renewlist {
   margin: 20px 0;
   padding: 7px 30px;
   font-weight: bold;
-  background-color: $charcoal;
-  color: $misty-rose;
+  background-color: $vivid-sky-blue;
+  color: $main-background;
+  &:hover {
+    background-color: $charcoal;
+  }
 }

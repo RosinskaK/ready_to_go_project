@@ -73,7 +73,7 @@ function Main() {
             setEntries(prev => [...prev, data[0]]);
         }
 
-        e.target.elements[0].value = 'Dodaj kolejną rzecz do spakowania';
+        e.target.elements[0].value = 'Dodaj kolejną rzecz do spakowania...';
     }
 
 
@@ -157,7 +157,7 @@ function Main() {
                                     entries.map(({entry, id, done}) =>
                                         <li key={id} onClick={() => handleDone(id)} className={done ? 'done' : ''}>
                                             {entry}
-                                            <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
+                                            <button className='todolist-li-btn' type='button' onClick={() => handleRemove(id)}>Usuń</button>
                                         </li>)
                                 }
                             </ul>
