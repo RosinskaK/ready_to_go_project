@@ -1,14 +1,15 @@
 
 input {
   outline: none;
+  padding-left: 5px;
 }
 
 input {
   height: 30px;
   border-radius: 3px;
-  border: none;
+  border: 1.5px solid transparent;
   &:focus {
-    border: 1px solid $cinereous;
+    border: 1.5px solid $cinereous;
   }
 }
 

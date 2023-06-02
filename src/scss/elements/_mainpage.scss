@@ -1,0 +1,109 @@
+.main-div {
+  //max-width: 1400px;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container-div {
+  width: 100vw;
+  max-width: 1400px;
+  //background-color: #fffbf9;
+  background-color: $main-background;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-top-bar {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+
+.main-top-bar-logo {
+  font-family: $font-logo;
+  font-size: 2em;
+  color: $charcoal;
+
+}
+
+.main-top-bar-btn {
+  padding: 5px 28px;
+  background-color: $vivid-sky-blue;
+  color: white;
+  font-weight: bold;
+  height: 31px;
+  &:hover {
+    background-color: $moonstone;
+  }
+}
+
+.todolist-container {
+  width: 1000px;
+  height: 100%;
+  background-color: $columbia-blue;
+
+  border-radius: 10px;
+  margin-bottom: 70px;
+  box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
+}
+
+.main-form {
+  margin: 20px 0;
+
+}
+
+.main-form-input {
+  width: 60%;
+  height: 35px;
+  font-size: 0.9em;
+
+}
+
+.main-form-btn {
+  margin-left: 5px;
+  padding: 7px 30px;
+  font-weight: bold;
+  background-color: $misty-rose;
+  color: $charcoal;
+  //box-shadow: 0 3px 3px rgba(17, 17, 17, 0.35);
+
+}
+
+//LIST
+ul {
+  border: 2px solid black;
+  width: 900px;
+
+}
+
+ul li {
+  color: orange;
+  width: 700px;
+  list-style: none;
+}
+
+ul li.done {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+.main-btn-renewlist {
+  margin: 20px 0;
+  padding: 7px 30px;
+  font-weight: bold;
+  background-color: $charcoal;
+  color: $misty-rose;
+}

@@ -1,3 +1,4 @@
+@import "generic/_reset.scss";
 @import "settings/_colors.scss";
 @import 'elements/_fonts.scss';
 
@@ -8,6 +9,8 @@
 @import 'elements/_inputs.scss';
 @import "elements/_signin.scss";
 @import "elements/_contentLogIn.scss";
+@import "elements/_mainpage.scss";
+@import "elements/_mainContentText.scss";
 
 
 //ZROBIĆ TU PORZĄDEK
@@ -19,7 +22,6 @@ body {
 }
 
 #root {
-
   font-family: $font-basic;
   margin: 0 auto;
  // padding: 2rem;
@@ -46,32 +48,13 @@ body {
 
 
 
-ul {
-  border: 2px solid black;
-}
 
-ul li {
-  color: orange;
-}
-
-ul li.done {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
 
 
 
 //h1 {
 //  color: $my-color;
 //}
-
-
-
-
-
-
-
 
 //
 //

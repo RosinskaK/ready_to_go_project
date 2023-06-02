@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import supabase from "../services/supabase.js";
 
+import MainContentText from "./MainContentText.jsx";
 import Footer from "./Footer.jsx";
 
 function Main() {
@@ -114,7 +115,6 @@ function Main() {
         }
      }
 
-
     const handleRenewList = async () => {
 
         const renewList = entries.map(list => {
@@ -135,38 +135,40 @@ function Main() {
         }
     }
 
-
     ////////
+    return (
+        <div className='main-div'>
+            <div className='main-container-div'>
+                <div className='main-top-bar'>
+                    <p className='main-top-bar-logo'>ReadyToGo</p>
+                    <button className='main-top-bar-btn' onClick={handleLogout}>Wyloguj</button>
+                </div>
+                <MainContentText />
 
-    return(
-        <>
-            <div>
-                <button onClick={handleLogout}>Wyloguj</button>
-                <h1>Main</h1>
-                <form onSubmit={handleSaveText}>
-                    <input id='text' type='text' placeholder='Wpisz pierwszą rzecz do spakowania...'/>
-                    <button>Dodaj</button>
-                </form>
-                {
-                    entries && (
-                        <ul>
-                            {
-                                entries.map(({entry, id, done}) =>
+                <div className='todolist-container'>
+                    <form className='main-form' onSubmit={handleSaveText}>
+                        <input className='main-form-input' id='text' type='text' placeholder='Wpisz pierwszą rzecz do spakowania...'/>
+                        <button className='main-form-btn'>Dodaj</button>
+                    </form>
+                    {
+                        entries && (
+                            <ul>
+                                {
+                                    entries.map(({entry, id, done}) =>
                                         <li key={id} onClick={() => handleDone(id)} className={done ? 'done' : ''}>
                                             {entry}
                                             <button type='button' onClick={() => handleRemove(id)}>Usuń wiersz</button>
                                         </li>)
-                            }
-                        </ul>
-                    )
-                }
-                <button onClick={handleRenewList}>Przywróć listę</button>
+                                }
+                            </ul>
+                        )
+                    }
+                    <button className='main-btn-renewlist' onClick={handleRenewList}>Przywróć listę</button>
+                </div>
             </div>
             <Footer></Footer>
-        </>
+        </div>
     );
 }
 
 export default Main;
-
-//
