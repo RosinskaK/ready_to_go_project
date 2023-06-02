@@ -32,7 +32,7 @@
 
 .main-top-bar-logo {
   font-family: $font-logo;
-  font-size: 2em;
+  font-size: 2.5em;
   color: $vivid-sky-blue;
 
 }
@@ -44,7 +44,7 @@
   font-weight: bold;
   height: 31px;
   &:hover {
-    background-color: $moonstone;
+    background-color: $charcoal;
   }
 }
 
@@ -91,7 +91,7 @@
   }
 }
 
-//LIST
+//----------LIST------------------------
 ul {
   background-color: $main-background;
   width: 90%;
@@ -106,7 +106,7 @@ ul {
 
 ul li {
   text-align: left;
-  padding-left: 40px;
+  padding-left: 20px;
 
   padding-bottom: 7px;
   padding-top: 7px;
@@ -125,18 +125,24 @@ ul li:last-child {
 }
 
 ul li.done {
-  background: #888;
+  background: #646363;
   color: #fff;
   text-decoration: line-through;
 }
 
 .todolist-li-btn {
-  margin-left: 10px;
+  margin-left: 30px;
+  padding: 5px 15px;
+  background-color: $misty-rose;
+  color: $charcoal;
+  font-weight: bold;
+  &:hover {
+    background-color: $apricot;
+  }
 }
 
-
 .main-btn-renewlist {
-  margin: 20px 0;
+  margin: 40px 0;
   padding: 7px 30px;
   font-weight: bold;
   background-color: $vivid-sky-blue;

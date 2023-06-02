@@ -73,7 +73,7 @@ function Main() {
             setEntries(prev => [...prev, data[0]]);
         }
 
-        e.target.elements[0].value = 'Dodaj kolejną rzecz do spakowania...';
+        e.target.elements[0].value = '';
     }
 
 
@@ -147,7 +147,7 @@ function Main() {
 
                 <div className='todolist-container'>
                     <form className='main-form' onSubmit={handleSaveText}>
-                        <input className='main-form-input' id='text' type='text' placeholder='Wpisz pierwszą rzecz do spakowania...'/>
+                        <input className='main-form-input' id='text' type='text' placeholder='Wpisz rzecz do spakowania...'/>
                         <button className='main-form-btn'>Dodaj</button>
                     </form>
                     {
