@@ -11,11 +11,13 @@
 @import "elements/_contentLogIn.scss";
 @import "elements/_mainpage.scss";
 @import "elements/_mainContentText.scss";
+@import 'elements/_notFound.scss';
 
 
 //ZROBIĆ TU PORZĄDEK
 
 body {
+  overflow-x: hidden;
   margin: 0 auto;
   box-sizing: border-box;
 

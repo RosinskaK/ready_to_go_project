@@ -73,6 +73,13 @@ function Main() {
             setEntries(prev => [...prev, data[0]]);
         }
 
+
+        ///////////////
+        
+
+
+        ///////////////
+
         e.target.elements[0].value = '';
     }
 

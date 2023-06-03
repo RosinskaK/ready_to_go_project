@@ -1,0 +1,17 @@
+.notfound-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notfound-btn {
+    max-width: 1400px;
+    width: 150px;
+    background-color: $apricot;
+    color: $vivid-sky-blue;
+    font-weight: 650;
+    &:hover {
+        background-color: $charcoal;
+    }
+
+}

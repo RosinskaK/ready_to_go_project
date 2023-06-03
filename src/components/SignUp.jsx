@@ -48,6 +48,7 @@ function SignUp() {
                         <input className='input-sign' id='password' type='password' placeholder='Podaj hasło'/>
                         <input className='input-sign' id='password_repeat' type='password'
                                placeholder='Potwierdź hasło'/>
+                               <p></p>
                         <button className='sign-btn'>Zarejestruj się</button>
                     </form>
                     <p className='link-to-signin'>lub przejdź do logowania</p>
