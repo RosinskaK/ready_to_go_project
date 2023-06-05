@@ -1,0 +1,61 @@
+.instruction-div {
+    text-align: left;
+    color: $charcoal;
+
+}
+
+.instruction-title {
+    margin-bottom: 15px;
+    span {
+        font-family: $font-logo;
+        color: $cinereous;
+        font-size: 1.3em;
+    }
+}
+
+.instruction-btn {
+    margin: 0 10px;
+    color: $vivid-sky-blue;
+    font-weight: bold;
+    background-color: $misty-rose;
+    &:hover {
+        background-color: $apricot;
+        color: $charcoal;
+    }
+
+}
+
+.instruction-hidden-div {
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    margin-bottom: 50px;
+
+    span {
+        font-family: $font-logo;
+        color: $cinereous;
+        font-size: 1.2em;
+
+    }
+}
+
+.instruction-line {
+
+    span {
+        font-weight: bold;
+        font-family: $font-basic;
+        font-size: 1em;
+        line-height: 1.9em;
+        color: $charcoal;
+    }
+
+}
+
+.instruction-line-last {
+    span {
+        font-family: $font-logo;
+        color: $cinereous;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+}

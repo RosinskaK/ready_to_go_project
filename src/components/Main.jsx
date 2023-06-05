@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import supabase from "../services/supabase.js";
 
 import MainContentText from "./MainContentText.jsx";
+import Instruction from "./Instruction.jsx";
 import Footer from "./Footer.jsx";
 
 function Main() {
@@ -69,16 +70,28 @@ function Main() {
                 { entry: text.value, author: session.session.user.email, done: false },])
             .select('*');
 
-        if (!error) {
+        // if (!error) {
+        //     setEntries(prev => [...prev, data[0]]);
+        // }
+
+
+
+        //
+
+
+        //TRZEBA DODAĆ BLOKOWANIE PUSTEGO STRINGA W SUPABASE
+
+
+
+        //alter table test add constraint disallow_empty_col1 check(a<>'');
+
+        if (!text.value) {
+            return;
+        } else if (!error) {  
             setEntries(prev => [...prev, data[0]]);
         }
-
-
-        ///////////////
-        
-
-
-        ///////////////
+    
+        //console.log(text.value);
 
         e.target.elements[0].value = '';
     }
@@ -142,6 +155,16 @@ function Main() {
         }
     }
 
+
+    ///////////////////////
+ //   const handleBlockEmptyString = async (e) => {
+//        if (e.target.elements = '') {
+//            return button.disabled = true;
+//        }
+//    }
+
+// disabled={input = '' ? true : false}
+
     ////////
     return (
         <div className='main-div'>
@@ -151,16 +174,17 @@ function Main() {
                     <button className='main-top-bar-btn' onClick={handleLogout}>Wyloguj</button>
                 </div>
                 <MainContentText />
+                <Instruction />
 
                 <div className='todolist-container'>
                     <form className='main-form' onSubmit={handleSaveText}>
                         <input className='main-form-input' id='text' type='text' placeholder='Wpisz rzecz do spakowania...'/>
-                        <button className='main-form-btn'>Dodaj</button>
+                        <button   className='main-form-btn'>Dodaj</button>
                     </form>
                     {
                         entries && (
                             <ul>
-                                {
+                                { 
                                     entries.map(({entry, id, done}) =>
                                         <li key={id} onClick={() => handleDone(id)} className={done ? 'done' : ''}>
                                             {entry}
