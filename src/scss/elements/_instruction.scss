@@ -1,7 +1,13 @@
 .instruction-div {
     text-align: left;
     color: $charcoal;
-
+    width: 800px;
+    @media only screen and (max-width: 480px) {
+        width: 90%;
+    }
+    @media only screen and (min-width: 481px) and (max-width: 900px) {
+        width: 90%;
+      }
 }
 
 .instruction-title {

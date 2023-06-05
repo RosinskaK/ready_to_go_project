@@ -2,6 +2,11 @@
 .welcome {
   max-width: 1400px;
   color: $charcoal;
+  @media only screen and (max-width: 550px) {
+    width: 90%;
+    padding-top: 10px;
+    font-size: 0.8em;
+  }
 }
 
 .welcome-line1 {

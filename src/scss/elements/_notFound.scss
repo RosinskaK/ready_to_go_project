@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media only screen and (max-width: 900px) {
+        max-width: 90vw;
+        max-height: 90vh;
+      }
 }
 
 .notfound-btn {
