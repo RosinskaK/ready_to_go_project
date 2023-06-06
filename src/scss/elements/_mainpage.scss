@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .main-top-bar {
@@ -28,14 +27,14 @@
 
   margin-top: 10px;
   margin-bottom: 15px;
-
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .main-top-bar-logo {
   font-family: $font-logo;
   font-size: 2.5em;
   color: $vivid-sky-blue;
-
 }
 
 .main-top-bar-btn {
@@ -56,6 +55,8 @@
   background-color: $moonstone;
 
   border-radius: 10px;
+
+  margin-top: 30px;
   margin-bottom: 70px;
   box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
 
@@ -70,7 +71,6 @@
 
 .main-form {
   margin: 20px 0;
-
 }
 
 .main-form-input {
@@ -81,6 +81,10 @@
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 
+  @media only screen and (max-width: 480px) {
+    height: 30px;
+    font-size: 0.8em;
+  }
 }
 
 .main-form-btn {
@@ -100,6 +104,14 @@
     background-color: $apricot;
     color: $charcoal
   }
+
+  @media only screen and (max-width: 480px) {
+    height: 30px;
+    padding-bottom: 25px;
+    padding-top: 4px;
+    
+    
+  }
 }
 
 //----------LIST------------------------
@@ -114,10 +126,12 @@ ul {
   box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
 
   @media only screen and (min-width: 481px) and (max-width: 1040px ) {
-    width: 85%;
+    width: 87%;
+    margin-left: 40px;
   }
   @media only screen and (max-width: 480px) {
-    width: 75%;
+    width: 85%;
+    margin-left: 25px;
   }
 }
 
@@ -129,6 +143,16 @@ ul li {
   padding-top: 7px;
 
   color: $charcoal;
+
+  //!!!!!!!!!!!!!!!!
+  word-break: break-all;  //przydatne- zmusza do podziału za długi wyraz!!! uważać przy linkach
+
+  @media only screen and (max-width: 480px) {
+   padding-bottom: 5px;
+   padding-top: 5px;
+   padding-left: 10px;
+   font-size: 0.7em;
+  }
 }
 
 ul li:nth-child(even) {
@@ -155,6 +179,11 @@ ul li.done {
 
   &:hover {
     background-color: $apricot;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 3px 10px;
+    font-size: 0.8em;
   }
 }
 

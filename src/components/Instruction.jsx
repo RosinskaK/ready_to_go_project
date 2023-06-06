@@ -20,8 +20,9 @@ export default function Instruction() {
                         <span>3.</span> Skreślać/odhaczać spakowaną już rzecz poprzez kliknięcie na nią</p>
                     <p className="instruction-line">
                         <span>4.</span> Odświeżać widok całej listy przez przycisk <span>Przywróć listę</span>, dzięki czemu Twoja lista będzie gotowa do ponownego odhaczania przy nastepnym pakowaniu</p>
+                    <p className="instruction-line">❗️ <span>Pamiętaj!</span> </p>
                     <p className="instruction-line-last instruction-line">
-                        ❗️ Pamiętaj! Twoja lista jest przechowywana w aplikacji <span>ReadyToGo</span> i czeka na Ciebie aż będzie ponownie potrzebna by ułatwić i przyśpieszyć proces pakowania w kolejną wspaniałą podróż 😊</p>
+                        Twoja lista jest przechowywana w aplikacji <span>ReadyToGo</span> i czeka na Ciebie aż będzie ponownie potrzebna by ułatwić i przyśpieszyć proces pakowania w kolejną wspaniałą podróż 😊</p>
                 </div>
             }
         </div>

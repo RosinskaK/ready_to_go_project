@@ -1,7 +1,7 @@
 .instruction-div {
-    text-align: left;
+    text-align: justify;
     color: $charcoal;
-    width: 800px;
+    width: 900px;
     @media only screen and (max-width: 480px) {
         width: 90%;
     }
@@ -11,7 +11,9 @@
 }
 
 .instruction-title {
+    font-size: 0.9em;
     margin-bottom: 15px;
+    
     span {
         font-family: $font-logo;
         color: $cinereous;
