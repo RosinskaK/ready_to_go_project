@@ -1,3 +1,5 @@
+import 'transition-style';
+
 import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -74,22 +76,14 @@ function Main() {
                 { entry: text.value, author: session.session.user.email, done: false },])
             .select('*');
 
-        // if (!error) {
-        //     setEntries(prev => [...prev, data[0]]);
-        // }
+
         if (!error) {  
             setEntries(prev => [...prev, data[0]]);
         }
 
         e.target.elements[0].value = '';
 
-        //
-
-
-    
         //console.log(text.value);
-
-        
     }
 
 
@@ -152,18 +146,9 @@ function Main() {
     }
 
 
-    ///////////////////////
- //   const handleBlockEmptyString = async (e) => {
-//        if (e.target.elements = '') {
-//            return button.disabled = true;
-//        }
-//    }
-
-// disabled={input = '' ? true : false}
-
     ////////
     return (
-        <div className='main-div'>
+        <div className='main-div' transition-style="in:circle:hesitate">
             <div className='main-container-div'>
                 <div className='main-top-bar'>
                     <p className='main-top-bar-logo'>ReadyToGo</p>
@@ -171,11 +156,10 @@ function Main() {
                 </div>
                 <MainContentText />
                 <Instruction />
-
                 <div className='todolist-container'>
                     <form className='main-form' onSubmit={handleSaveText}>
                         <input className='main-form-input' id='text' type='text' placeholder='Wpisz rzecz do spakowania...'/>
-                        <button   className='main-form-btn'>Dodaj</button>
+                        <button className='main-form-btn'>Dodaj</button>
                     </form>
                     {
                         entries && (
