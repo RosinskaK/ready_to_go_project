@@ -12,8 +12,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path={'/'} element={<Main />} ></Route>
-                <Route path={'/signin'} element={<SignIn />} ></Route>
                 <Route path={'/signup'} element={<SignUp />} ></Route>
+                <Route path={'/signin'} element={<SignIn />} ></Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
