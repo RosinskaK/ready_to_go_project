@@ -64,6 +64,10 @@ function Main() {
 
         const { text } = e.target.elements;
 
+        if (!text.value) {
+            return;
+        } 
+
         const { data, error } = await supabase
             .from('entries')
             .insert([
@@ -73,27 +77,19 @@ function Main() {
         // if (!error) {
         //     setEntries(prev => [...prev, data[0]]);
         // }
+        if (!error) {  
+            setEntries(prev => [...prev, data[0]]);
+        }
 
-
+        e.target.elements[0].value = '';
 
         //
 
 
-        //TRZEBA DODAĆ BLOKOWANIE PUSTEGO STRINGA W SUPABASE
-
-
-
-        //alter table test add constraint disallow_empty_col1 check(a<>'');
-
-        if (!text.value) {
-            return;
-        } else if (!error) {  
-            setEntries(prev => [...prev, data[0]]);
-        }
     
         //console.log(text.value);
 
-        e.target.elements[0].value = '';
+        
     }
 
 
