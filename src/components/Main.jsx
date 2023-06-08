@@ -148,7 +148,7 @@ function Main() {
 
     ////////
     return (
-        <div className='main-div' transition-style="in:circle:hesitate">
+        <div className='main-div'>
             <div className='main-container-div'>
                 <div className='main-top-bar'>
                     <p className='main-top-bar-logo'>ReadyToGo</p>

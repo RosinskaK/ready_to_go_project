@@ -7,13 +7,12 @@ export default function Instruction() {
     return (
         <div className="instruction-div">
             <p className="instruction-title">
-                💡 Pokaż<button className="instruction-btn" onClick={() => setShowInfo(!showInfo)}>wskazówki</button>jak używać <span>ReadyToGo</span></p>
+                💡Pokaż<button className="instruction-btn" onClick={() => setShowInfo(!showInfo)}>wskazówki</button>jak używać <span>ReadyToGo</span></p>
             {
                 showInfo &&
-                <div className="instruction-hidden-div"> W <span>ReadyToGo</span> możesz:
+                <div className="instruction-hidden-div"> <b>W</b> <span>ReadyToGo</span> <b>możesz:</b>
                     <p className="instruction-line">
-                        <span>1.</span> Dodawać każdą nawet najmniejszą rzecz do listy do spakowania w podróż przez przycisk <span>Dodaj
-                        </span></p>
+                        <span>1.</span> Dodawać każdą nawet najmniejszą rzecz do listy rzeczy do spakowania w podróż przez przycisk <span>Dodaj</span></p>
                     <p className="instruction-line">
                         <span>2.</span> Usuwać każdą błędnie dodaną lub już niepotrzebną rzecz przez przycisk <span>Usuń</span> znajdujący się przy danej rzeczy</p>
                     <p className="instruction-line">

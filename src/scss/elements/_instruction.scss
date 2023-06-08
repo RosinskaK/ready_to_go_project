@@ -4,6 +4,7 @@
     width: 900px;
     @media only screen and (max-width: 480px) {
         width: 90%;
+        font-size: 0.9em;
     }
     @media only screen and (min-width: 481px) and (max-width: 900px) {
         width: 90%;
@@ -26,11 +27,13 @@
     color: $vivid-sky-blue;
     font-weight: bold;
     background-color: $misty-rose;
+
+    padding: 3px 7px;
+
     &:hover {
         background-color: $apricot;
         color: $charcoal;
     }
-
 }
 
 .instruction-hidden-div {
@@ -43,7 +46,6 @@
         font-family: $font-logo;
         color: $cinereous;
         font-size: 1.2em;
-
     }
 }
 
@@ -56,7 +58,6 @@
         line-height: 1.9em;
         color: $charcoal;
     }
-
 }
 
 .instruction-line-last {

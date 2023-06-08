@@ -2,7 +2,7 @@
 .signup-div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   max-width: 1400px;
@@ -14,19 +14,19 @@
   max-width: 1400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   width: 100%;
-  min-height: 1100px;
+  min-height: 980px;
 
   background-image: url("../assets/packing3.jpg");
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
 
-  @media only screen and (max-width: 480px) {
-    min-height: 880px;
+  @media only screen and (max-width: 900px) {
+    min-height: 770px;
   }
 }
 
@@ -39,9 +39,11 @@
   //opacity: 95%;
   box-shadow: 0 8px 10px rgba(17, 17, 17, 0.55);
   margin-bottom: 50px;
+  margin-top: 15px;
 
   @media only screen and (max-width: 480px) {
     margin-bottom: 10px;
+    margin-top: 15px;
   }
 }
 
@@ -77,14 +79,13 @@
   width: 100%;
   display: block;
   text-align: left;
-  margin: 15px 10px 30px 10px;
+  margin: 8px 10px 80px 10px;
   
 
   @media only screen and (max-width: 480px) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 40px;
     margin-left: 10px;
-    padding-top: 40px;
   }
 }
 
