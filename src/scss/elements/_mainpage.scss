@@ -47,6 +47,9 @@
   &:hover {
     background-color: $charcoal;
   }
+  @media only screen and (max-width: 480px) {
+    margin-top: 8px;
+  }
 }
 
 .todolist-container {
