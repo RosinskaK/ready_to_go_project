@@ -6,6 +6,8 @@ import supabase from "../services/supabase.js";
 import ContentLogIn from "./ContentLogIn.jsx";
 import Footer from "./Footer.jsx";
 
+//------------------------------ZALOGUJ SIĘ----------------------------
+
 
 function SignIn() {
 
@@ -28,7 +30,8 @@ function SignIn() {
             return;
         }
 
-        setAuthError(error.message);
+        setAuthError('Nieprawidłowe hasło lub login');
+        //setAuthError(error.message);
     }
 
     return (
@@ -39,11 +42,11 @@ function SignIn() {
                 <div className='signin-back'>
                     <form onSubmit={handleSignIn} className='signin-form'>
                         <p className='signin-sign'>Zaloguj się</p>
-                        {
-                            authError && <div style={{color: 'red'}}>{authError}</div>
-                        }
                         <input className='input-sign' id='email' placeholder='Podaj swój adres email'/>
                         <input className='input-sign' id='password' type='password' placeholder='Podaj hasło'/>
+                        {
+                            authError && <div className="signin-error-communicat">{authError}</div>
+                        }
                         <button className='sign-btn'>Zaloguj się</button>
                     </form>
                     <p className='link-to-signup'>jeśli nie masz konta zarejestruj się</p>
