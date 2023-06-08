@@ -43,7 +43,7 @@ function SignIn() {
                             authError && <div style={{color: 'red'}}>{authError}</div>
                         }
                         <input className='input-sign' id='email' placeholder='Podaj swój adres email'/>
-                        <input className='input-sign' id='password' placeholder='Podaj hasło'/>
+                        <input className='input-sign' id='password' type='password' placeholder='Podaj hasło'/>
                         <button className='sign-btn'>Zaloguj się</button>
                     </form>
                     <p className='link-to-signup'>jeśli nie masz konta zarejestruj się</p>

@@ -5,6 +5,7 @@ import supabase from "../services/supabase.js";
 import Welcome from "./Welcome.jsx";
 import Footer from "./Footer.jsx";
 
+//-------ZAREJESTRUJ SIĘ------------------
 
 function SignUp() {
 
@@ -15,9 +16,17 @@ function SignUp() {
 
         const { email, password, password_repeat } = e.target.elements;
 
-        if (password.value !== password_repeat.value) {
-            alert('Oba hasła muszą być identyczne');
-            return;
+        // if (password.value !== password_repeat.value) {
+        //     alert('Oba hasła muszą być identyczne');
+        //     return;
+        // }
+
+        if (password.value === "" || (password.value !== password_repeat.value)) {
+            alert('Hasła nie są takie same lub puste');
+        } else if (!email.value.includes('@')) {
+            alert('Email musi posiadać znak @');
+        } else if (password.value.length <6 || password_repeat.value.length <6) {
+            alert('Hasło musi mieć co najmniej 6 znaków');
         }
 
         let { error } = await supabase.auth.signUp({
@@ -29,12 +38,8 @@ function SignUp() {
             navigation('/');
             return;
         }
-
         console.log(error);
-
     }
-
-    //ewentualnie dodać walidacje!!!!!!!!!!!!
 
     return (
         <div className='signup-div'>
