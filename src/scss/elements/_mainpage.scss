@@ -43,12 +43,14 @@
   color: white;
   font-weight: bold;
   height: 31px;
+  margin-right: 20px;
 
   &:hover {
     background-color: $charcoal;
   }
   @media only screen and (max-width: 480px) {
     margin-top: 8px;
+    margin-right: 5px;
   }
 }
 
@@ -112,8 +114,6 @@
     height: 30px;
     padding-bottom: 25px;
     padding-top: 4px;
-    
-    
   }
 }
 
@@ -160,6 +160,11 @@ ul li {
 
 ul li:nth-child(even) {
   background-color: $columbia-blue;
+}
+
+ul li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 ul li:last-child {
