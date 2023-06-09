@@ -2,7 +2,7 @@
 # ReadyToGo app
 
 
-The <img src="./public/logo.png" alt="screenshot" width="auto" height="15"/>ReadyToGo app is a kind of to-do list where you can create your own personal packing list for each trip.
+The <img src="./public/logo.png" alt="screenshot" width="auto" height="25"/> app is a kind of to-do list where you can create your own personal packing list for each trip.
 
 It is designed for everyone and for various types of trips. It is only limited by the user's imagination✨
 
@@ -12,10 +12,10 @@ It is designed for everyone and for various types of trips. It is only limited b
 
 <div align="center"> 
   <img src="./public/desktopmain.png" alt="screenshot" />
+    <img src="./public/desktop.signin.png" alt="screenshot" width="400" height="auto"/>
+  <img src="./public/desktopmaininstructions.png" alt="screenshot" width="400" height="auto"/>
   <img src="./public/desktopmaindone.png" alt="screenshot" />
   <img src='./public/desktopsignup.png' alt="screenshot" />
-  <img src="./public/desktop.signin.png" alt="screenshot" width="400" height="auto"/>
-  <img src="./public/desktopmaininstructions.png" alt="screenshot" width="400" height="auto"/>
   <img src='./public/mobilemain.png' alt="screenshot" width="300" height="auto" />
   <img src='./public/mobilesignin.png' alt="screenshot" width="300" height="auto"/>
   <img src='./public/mobilemaindone.png' alt="screenshot" width="300" height="auto"/>
