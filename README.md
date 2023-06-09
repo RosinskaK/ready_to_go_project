@@ -11,12 +11,12 @@ It is designed for everyone and for various types of trips. It is only limited b
 ## Screenshots
 
 <div align="center"> 
-  <img src="./public/desktop.signin.png" alt="screenshot"/>
   <img src="./public/desktopmain.png" alt="screenshot" />
+  <img src="./public/desktop.signin.png" alt="screenshot"/>
   <img src="./public/desktopmaindone.png" alt="screenshot" />
   <img src="./public/desktopmaininstructions.png" alt="screenshot" />
   <img src='./public/desktopsignup.png' alt="screenshot" />
-  <img src='./public/mobilemain.png' alt="screenshot" />
+  <img src='./public/mobilemain.png' alt="screenshot" width="200" height="auto" />
   <img src='./public/mobilemaindone.png' alt="screenshot"/>
   <img src='./public/mobilesignin.png' alt="screenshot" />
   <img src='./public/mobilesignup.png' alt="screenshot" />
