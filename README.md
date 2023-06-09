@@ -2,7 +2,7 @@
 # ReadyToGo app
 
 
-The <img src="./public/logo.png" alt="screenshot" width="auto" height="25"/> app is a kind of to-do list where you can create your own personal packing list for each trip.
+The ReadyToGo app is a kind of to-do list where you can create your own personal packing list for each trip.
 
 It is designed for everyone and for various types of trips. It is only limited by the user's imagination✨
 
@@ -12,8 +12,8 @@ It is designed for everyone and for various types of trips. It is only limited b
 
 <div align="center"> 
   <img src="./public/desktopmain.png" alt="screenshot" />
-    <img src="./public/desktop.signin.png" alt="screenshot" width="400" height="auto"/>
-  <img src="./public/desktopmaininstructions.png" alt="screenshot" width="400" height="auto"/>
+    <img src="./public/desktop.signin.png" alt="screenshot" width="405" height="auto"/>
+  <img src="./public/desktopmaininstructions.png" alt="screenshot" width="405" height="auto"/>
   <img src="./public/desktopmaindone.png" alt="screenshot" />
   <img src='./public/desktopsignup.png' alt="screenshot" />
   <img src='./public/mobilemain.png' alt="screenshot" width="300" height="auto" />
@@ -21,16 +21,6 @@ It is designed for everyone and for various types of trips. It is only limited b
   <img src='./public/mobilemaindone.png' alt="screenshot" width="300" height="auto"/>
   <img src='./public/mobilesignup.png' alt="screenshot" width="300" height="auto"/>
 </div>
-
-
-## About the Project
-
-This application was created from my great passion for traveling and a little less love for packing 😉
-
-The biggest advantage of ReadyToGo is that it is a reusable list. The list once made is assigned to the user's account and waits until it is needed for the next trip. You can edit it at any time and check off the items to be packed many times.  
-Therefore you can forget about the stress of creating a new packing list every time you travel somewhere💙
-
-📱This project also has a mobile version!
 
 
 ## About the Project
@@ -122,12 +112,13 @@ To run this project, you will need to add the following environment variables to
 
 
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 ## Acknowledgements
 
 - [Supabase](https://supabase.com/)

@@ -101,7 +101,6 @@ function Main() {
         }
     }
 
-    //////////
     const handleDone = async (id) => {
             setEntries(entries.map(task => {
             if (task.id === id) {
@@ -145,8 +144,6 @@ function Main() {
         }
     }
 
-
-    ////////
     return (
         <div className='main-div'>
             <div className='main-container-div'>
