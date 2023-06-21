@@ -30,7 +30,7 @@ function SignIn() {
             return;
         }
 
-        setAuthError('Nieprawidłowe hasło lub login');
+        setAuthError('Nieprawidłowy email lub hasło');
         //setAuthError(error.message);
     }
 
