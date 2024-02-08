@@ -1,11 +1,12 @@
 .main-div {
   //max-width: 1400px;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $main-background;
 }
 
 .main-container-div {
