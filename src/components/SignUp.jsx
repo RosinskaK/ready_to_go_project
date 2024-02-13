@@ -42,6 +42,7 @@ function SignUp() {
     }
 
     return (
+        <>
         <div className='signup-div'>
             <div className='signup-main-container'>
                 <p className='signup-logo'>ReadyToGo</p>
@@ -50,7 +51,7 @@ function SignUp() {
                     <form onSubmit={handleSignUp} className='signup-form'>
                         <p className='signup-sign'>Zarejestruj się</p>
                         <input className='input-sign' id='email' placeholder='Podaj swój adres email'/>
-                        <input className='input-sign' id='password' type='password' placeholder='Podaj hasło'/>
+                        <input className='input-sign' id="password" type="password" placeholder="Podaj hasło"/>
                         <input className='input-sign' id='password_repeat' type='password'
                                placeholder='Potwierdź hasło'/>
                                <p></p>
@@ -60,8 +61,9 @@ function SignUp() {
                     <button className='sign-link'><Link to='/signin'>Zaloguj się</Link></button>
                 </div>
             </div>
-            <Footer/>
         </div>
+        <Footer/>
+        </>
     );
 }
 

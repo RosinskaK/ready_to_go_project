@@ -3,25 +3,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  max-width: 1400px;
+  background-color: $moonstone;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .signin-main-container {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 670px;
+  align-items: center; 
   background-color: $moonstone;
+  flex-grow: 1;
   
   @media only screen and (max-width: 480px) {
-    height: 1000px;
     padding-bottom: 50px;
   }
 }
@@ -48,7 +45,7 @@
   height: 330px;
   border-radius: 50%;
   box-shadow: 0 6px 6px rgba(17, 17, 17, 0.35);
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 
   @media only screen and (max-width: 350px) {
     width: 90%;
@@ -60,8 +57,9 @@
   flex-direction: column;
   align-items: center;
   width: 275px;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-left: 52px;
+
   @media only screen and (max-width: 350px) {
     width: 90%;
   }

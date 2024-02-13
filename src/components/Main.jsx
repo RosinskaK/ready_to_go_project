@@ -1,7 +1,4 @@
-import 'transition-style';
-
 import { useEffect, useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 import supabase from "../services/supabase.js";
@@ -9,6 +6,7 @@ import supabase from "../services/supabase.js";
 import MainContentText from "./MainContentText.jsx";
 import Instruction from "./Instruction.jsx";
 import Footer from "./Footer.jsx";
+
 
 function Main() {
 
@@ -44,7 +42,7 @@ function Main() {
     }
 
     const getEntries = async () => {
-        console.log(session);
+        //console.log(session);
 
         let { data, error } = await supabase.from('entries').select('*').eq('author', session.session.user.email);
 
@@ -106,14 +104,14 @@ function Main() {
             if (task.id === id) {
                 task.done = !task.done;
             }
-            console.log(task.done);
-            console.log(task);
+            //console.log(task.done);
+            //console.log(task);
 
             return task;   //DZIAŁA NIE RUSZAĆ !!!!!!!!!!!!!!!!!!!!!!!!!!!
         }));
 
-        console.log(entries.done);
-        console.log(entries.id);
+        //console.log(entries.done);
+        //console.log(entries.id);
         const { error } = await supabase
             .from('entries')
             .update( { done: entries.find(task => task.id === id).done } )
@@ -131,8 +129,8 @@ function Main() {
             return list;
         });
 
-        console.log(entries);
-        console.log(renewList);
+        //console.log(entries);
+        //console.log(renewList);
 
         const {error} = await supabase
             .from('entries')

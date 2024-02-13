@@ -2,6 +2,7 @@
     text-align: justify;
     color: $charcoal;
     width: 900px;
+
     @media only screen and (max-width: 480px) {
         width: 90%;
         font-size: 0.9em;
@@ -27,7 +28,6 @@
     color: $vivid-sky-blue;
     font-weight: bold;
     background-color: $misty-rose;
-
     padding: 3px 7px;
 
     &:hover {
@@ -61,6 +61,7 @@
 }
 
 .instruction-line-last {
+
     span {
         font-family: $font-logo;
         color: $cinereous;
