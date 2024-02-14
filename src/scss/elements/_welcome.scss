@@ -2,11 +2,12 @@
   max-width: 1400px;
   color: $charcoal;
   padding: 0 20px;
+  line-height: 1.6rem;
 
   @media only screen and (max-width: 550px) {
     width: 90%;
     padding-top: 10px;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 
@@ -24,12 +25,12 @@
 
 .welcome-line2 {
   margin: 0;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }
 
 .welcome-line3 {
   margin: 0;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 
   span {
     font-family: $font-logo;

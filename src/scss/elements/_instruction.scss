@@ -2,24 +2,28 @@
     text-align: justify;
     color: $charcoal;
     width: 900px;
+    font-size: 1rem;
 
     @media only screen and (max-width: 480px) {
         width: 90%;
-        font-size: 0.9em;
     }
     @media only screen and (min-width: 481px) and (max-width: 900px) {
         width: 90%;
-      }
+    }
 }
 
 .instruction-title {
-    font-size: 0.9em;
+    font-size: 1rem;
     margin-bottom: 15px;
     
     span {
         font-family: $font-logo;
         color: $cinereous;
         font-size: 1.3em;
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 0.9em;
     }
 }
 
@@ -38,7 +42,7 @@
 
 .instruction-hidden-div {
     text-align: left;
-    font-size: 0.9em;
+    font-size: 1rem;
     line-height: 1.8em;
     margin-bottom: 50px;
 
@@ -46,6 +50,10 @@
         font-family: $font-logo;
         color: $cinereous;
         font-size: 1.2em;
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 0.9em;
     }
 }
 
@@ -65,7 +73,7 @@
     span {
         font-family: $font-logo;
         color: $cinereous;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         font-weight: 400;
     }
 }

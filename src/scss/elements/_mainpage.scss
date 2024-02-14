@@ -107,13 +107,19 @@
   //box-shadow: 0 3px 3px rgba(17, 17, 17, 0.35);
   &:hover {
     background-color: $apricot;
-    color: $charcoal
+    color: $charcoal;
+
+    @media only screen and (max-width: 480px) {
+      height: 30px;
+      padding-bottom: 25px;
+      padding-top: 3.5px;
+    }
   }
 
   @media only screen and (max-width: 480px) {
     height: 30px;
     padding-bottom: 25px;
-    padding-top: 4px;
+    padding-top: 3.5px;
   }
 }
 
@@ -148,10 +154,8 @@ ul li {
   word-break: break-all;  //przydatne- zmusza do podziału za długi wyraz!!! uważać przy linkach
 
   @media only screen and (max-width: 480px) {
-   padding-bottom: 5px;
-   padding-top: 5px;
    padding-left: 10px;
-   font-size: 0.7em;
+   font-size: 0.9rem;
   }
 }
 
