@@ -1,11 +1,14 @@
-
 # ReadyToGo app
 
 
-The ReadyToGo app is a kind of to-do list where you can create your own personal packing list for each trip.
-
+The **ReadyToGo** app is a to-do list where you can create your own personal packing list for each trip.
 It is designed for everyone and for various types of trips. It is only limited by the user's imagination✨
 
+
+Project built in React💙
+
+
+To build it, I used React components, React Router DOM, Supabase as a backend support, Vite and SCSS. Thanks to the use of RWD, the application is also available in a mobile version.
 
 
 ## Screenshots
@@ -28,7 +31,7 @@ It is designed for everyone and for various types of trips. It is only limited b
 This application was created from my great passion for traveling and a little less love for packing 😉
 
 The biggest advantage of ReadyToGo is that it is a reusable list. The list once made is assigned to the user's account and waits until it is needed for the next trip. You can edit it at any time and check off the items to be packed many times.  
-Therefore you can forget about the stress of creating a new packing list every time you travel somewhere💙
+Therefore you can forget about the stress of creating a new packing list every time you travel somewhere💚
 
 📱This project also has a mobile version!
 
@@ -43,7 +46,9 @@ Therefore you can forget about the stress of creating a new packing list every t
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
+
 ## Usage
+
 In ReadyToGo you can:
 - Add even the smallest thing to the list of things to pack for a trip by clicking the Add button
 
@@ -55,10 +60,11 @@ In ReadyToGo you can:
 
 ❗️ Remember!   
 Your list is stored in the ReadyToGo app and is waiting for you until you need it again to facilitate and speed up the packing process for your next great trip 😊
+
+
 ## Technologies Used
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
 
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
@@ -68,11 +74,11 @@ Your list is stored in the ReadyToGo app and is waiting for you until you need i
 
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 
 ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
+
 ## Setup
 
 This project uses npm as package manager
@@ -104,6 +110,8 @@ Start the server
 ```bash
   npm run dev
 ```
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -111,11 +119,9 @@ To run this project, you will need to add the following environment variables to
 `VITE_SUPABASE_API_KEY=`
 
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 
 ## Acknowledgements
@@ -123,9 +129,10 @@ To run this project, you will need to add the following environment variables to
 - [Supabase](https://supabase.com/)
 - [Vite](https://vitejs.dev/)
 - [Animate.css](https://animate.style/)
+- [Transition.css](https://www.transition.style/)
 - [Netlify](https://www.netlify.com/)
 - [Canva](https://www.canva.com/)
-- and the constant and unfailing support of my mentor [@MarceliOlszewski](https://pl.linkedin.com/in/marceli-olszewski-80419613a) - to him my huge thanks and infinite gratitude 🤗
+- and the constant and unfailing support of my mentor @MarceliOlszewski - to him my huge thanks and infinite gratitude 🤗
 
 
 ## Contact
