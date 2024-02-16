@@ -8,6 +8,28 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+
+
+
+// Cypress.Commands.add("getBySel", (selector, ...args) => {
+//     return cy.get(`[data-test=${selector}]`, ...args);
+//   });
+  
+//   Cypress.Commands.add("getBySelLike", (selector, ...args) => {
+//     return cy.get(`[data-test*=${selector}]`, ...args);
+//   });
+
+// uses two useful custom commands for selecting elements for testing:
+
+// getBySel yields elements with a data-test attribute that match a specified selector.
+// getBySelLike yields elements with a data-test attribute that contains a specified selector.
+
+
+
+
+
+
+
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
