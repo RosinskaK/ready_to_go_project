@@ -10,6 +10,12 @@ Project built in React💙
 
 To build it, I used React components, React Router DOM, Supabase as a backend support, Vite and SCSS. Thanks to the use of RWD, the application is also available in a mobile version.
 
+You can log in to the application using these prepared data:
+**e-mail**: test@test.pl
+**password**: 123456
+
+Feel free to use them, to see how the entire application works.
+
 
 ## Screenshots
 
